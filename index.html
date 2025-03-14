@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades de Matemática - Currículo Paulista/BNCC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Habilidades de Matemática - Currículo Paulista/BNCC</h1>
+
+        <div class="habilidadeSelectContainer">
+            <label for="habilidadeSelect" class="habilidade-texto">Escolha uma habilidade:</label>
+            <select id="habilidadeSelect">
+                <option value="">Selecione uma habilidade...</option>
+                <option value="EM13MAT301">EM13MAT301 - Equações Lineares Simultâneas</option>
+                <option value="EM13MAT305">EM13MAT305 - Funções Logarítmicas</option>
+                <option value="EM13MAT403">EM13MAT403 - Funções Exponenciais e Logarítmicas</option>
+            </select>
+        </div>
+
+        <div class="subHabilidadeSelectContainer" id="subHabilidadeContainer" style="display: none;">
+            <label for="subHabilidadeSelect" class="habilidade-texto">Escolha um tópico:</label>
+            <select id="subHabilidadeSelect">
+                <option value="">Selecione um tópico...</option>
+            </select>
+        </div>
+
+        <div class="explicacao" id="explicacao">
+            <h3>Descrição Detalhada:</h3>
+            <p id="textoExplicacao"></p>
+
+            <div class="mapaMental" id="mapaMental">
+                <h3>Mapa Mental</h3>
+                <img id="imgMapaMental" src="" alt="Mapa Mental">
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Desenvolvido por: Daniel Moraes, Ryan Silva, Rafael Viana, Vitor Reis, Gustavo Henrique e Murilo Moreira</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
