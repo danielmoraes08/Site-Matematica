@@ -1,107 +1,145 @@
-/* Ajuste para um visual moderno e mais claro */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2a2d35; /* Fundo mais claro e neutro */
+    background-color: #2a2d35;
     color: #e0e0e0;
     text-align: center;
-    padding-top: 50px;
+    padding: 20px;
+    margin: 0;
 }
 
 .container {
     background: #383c48;
-    padding: 40px; /* Aumentando espaçamento interno */
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     max-width: 800px;
-    margin: auto;
-    margin-top: 80px; /* Centralizando melhor o bloco principal */
-    margin-bottom: 5em;
+    margin: 50px auto; 
 }
 
 h1 {
-    font-size: 2.2em;
-    margin-bottom: 30px;
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #ffffff;
 }
 
 label {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #dcdcdc;
     margin-bottom: 10px;
     display: block;
 }
 
-select {
+select, button {
     width: 100%;
     padding: 14px;
-    font-size: 1.1em;
-    border: 1px solid #555;
+    font-size: 1em;
     border-radius: 6px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+select {
     background: #454954;
     color: #ffffff;
     cursor: pointer;
     transition: 0.3s;
-    margin-bottom: 20px;
 }
 
 select:hover {
     background: #535766;
 }
 
-.explicacao {
-    background: #404552;
-    padding: 25px;
-    border-radius: 8px;
-    margin-top: 30px;
-    display: block; /* Garantindo que a explicação apareça */
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
-    border: 1px solid #505764;
+.button-reset {
+    background: #ffd58c;
+    color: #404552;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    
 }
 
-.mapaMental {
-    display: block;
-    margin-top: 25px;
-    opacity: 1;
+.button-reset:hover {
+    background: #ffd58c;
+}
+
+.explicacao {
+    background: #404552;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
     transition: opacity 0.4s ease-in-out;
 }
 
 .mapaMental img {
     width: 100%;
     border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.mapaMental img:hover {
-    transform: scale(1.03);
-}
-
-.button-reset {
-    background: #d9534f;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 30px;
-    transition: 0.3s;
-}
-
-.button-reset:hover {
-    background: #c9302c;
 }
 
 .footer {
     background-color: #22252b;
     color: #f8f8f8;
     text-align: center;
-    padding: 15px;
+    padding: 1rem;
     width: 100%;
-    position: fixed; /* Mantém o rodapé fixo no fundo */
-    bottom: 0; /* Alinha o rodapé na parte inferior */
-    left: 0; /* Garante que ele ocupe toda a largura */
-    font-size: 1.1em;
-    border-top: 2px solid #3a3d45;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1em;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 95vw;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    select, button {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+
+    .explicacao {
+        padding: 15px;
+    }
+
+    .mapaMental img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        font-size: 0.8em;
+        padding: 10px;
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    select, button {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .footer {
+        font-size: 0.75em;
+    }
 }
