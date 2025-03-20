@@ -3,8 +3,8 @@ const subHabilidadeSelect = document.getElementById('subHabilidadeSelect');
 const subHabilidadeContainer = document.getElementById('subHabilidadeContainer');
 const explicacao = document.getElementById('explicacao');
 const textoExplicacao = document.getElementById('textoExplicacao');
-const mapaMental = document.getElementById('mapaMental');
 const imgMapaMental = document.getElementById('imgMapaMental');
+const resetButton = document.getElementById('resetButton');
 
 const subHabilidades = {
     "EM13MAT301": {
@@ -39,11 +39,6 @@ const subHabilidades = {
     }
 };
 
-const resetButton = document.createElement('button');
-resetButton.textContent = 'Reiniciar';
-resetButton.classList.add('button-reset');
-document.querySelector('.container').appendChild(resetButton);
-
 habilidadeSelect.addEventListener('change', function() {
     const habilidade = habilidadeSelect.value;
     
@@ -59,11 +54,9 @@ habilidadeSelect.addEventListener('change', function() {
         });
 
         explicacao.style.display = 'none';
-        mapaMental.style.display = 'none';
     } else {
         subHabilidadeContainer.style.display = 'none';
         explicacao.style.display = 'none';
-        mapaMental.style.display = 'none';
     }
 });
 
@@ -75,10 +68,8 @@ subHabilidadeSelect.addEventListener('change', function() {
         explicacao.style.display = 'block';
         textoExplicacao.textContent = subHabilidades[habilidade][subHabilidade].descricao;
         imgMapaMental.src = subHabilidades[habilidade][subHabilidade].mapa;
-        mapaMental.style.display = 'block';
     } else {
         explicacao.style.display = 'none';
-        mapaMental.style.display = 'none';
     }
 });
 
@@ -87,5 +78,26 @@ resetButton.addEventListener('click', function() {
     subHabilidadeSelect.innerHTML = '<option value="">Selecione um tópico...</option>';
     subHabilidadeContainer.style.display = 'none';
     explicacao.style.display = 'none';
-    mapaMental.style.display = 'none';
+});
+
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const closeModal = document.querySelector(".close");
+
+imgMapaMental.addEventListener("click", function() {
+    if (imgMapaMental.src) {
+        modal.style.display = "flex";
+        modalImg.src = imgMapaMental.src;
+    }
+});
+
+closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
 });
