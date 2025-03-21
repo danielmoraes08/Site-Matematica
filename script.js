@@ -5,9 +5,11 @@ const explicacao = document.getElementById('explicacao');
 const textoExplicacao = document.getElementById('textoExplicacao');
 const imgMapaMental = document.getElementById('imgMapaMental');
 const resetButton = document.getElementById('resetButton');
+const habilidadeDescricao = document.getElementById('habilidadeDescricao');
 
 const subHabilidades = {
     "EM13MAT301": {
+        descricao: "Resolver e elaborar problemas do cotidiano, da Matemática e de outras áreas do conhecimento, que envolvem equações lineares simultâneas, usando técnicas algébricas e gráficas, com ou sem apoio de tecnologias digitais.",
         "Sistemas Lineares": {
             descricao: `Os sistemas lineares são um conjunto de duas ou mais equações lineares que compartilham as mesmas variáveis. A solução de um sistema linear é o ponto ou conjunto de pontos onde todas as equações do sistema se interceptam. Estes sistemas são amplamente usados para modelar problemas em que há múltiplas condições que devem ser atendidas simultaneamente. Aplicações práticas incluem problemas de otimização, engenharia e até mesmo na análise de redes econômicas. Métodos como substituição, adição e o uso de matrizes são ferramentas comuns para encontrar a solução dos sistemas.`,
             mapa: "Images/SistemasLineares.png"
@@ -18,6 +20,7 @@ const subHabilidades = {
         }
     },
     "EM13MAT305": {
+        descricao: "Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros.",
         "Função Logarítmica": {
             descricao: `A função logarítmica é a inversa da função exponencial. Ela é fundamental em diversos campos da matemática, pois ajuda a resolver equações em que a variável aparece como um expoente. O logaritmo permite transformar uma multiplicação de grandes números em uma soma, facilitando cálculos complexos. Além disso, a função logarítmica é crucial para modelar fenômenos de crescimento e decaimento, como no cálculo de juros compostos, em populações biológicas e até em processos físicos como a desintegração radioativa.`,
             mapa: "Images/funcaologaritmica.png"
@@ -28,6 +31,7 @@ const subHabilidades = {
         }
     },
     "EM13MAT403": {
+        descricao: "Analisar e estabelecer relações, com ou sem apoio de tecnologias digitais, entre as representações de funções exponencial e logarítmica expressas em tabelas e em plano cartesiano, para identificar as características fundamentais (domínio, imagem, crescimento) de cada função.",
         "Potência": {
             descricao: `As funções de potência envolvem uma base elevada a um expoente. Essas funções são essenciais para descrever muitos fenômenos de crescimento rápido, como a multiplicação exponencial de bactérias em uma população, o crescimento de investimentos financeiros com juros compostos, ou o aumento de radiação em reações nucleares. As potências também são úteis na física, especialmente em leis como a da gravitação de Newton, que usa uma função de potência para descrever a atração gravitacional entre dois corpos.`,
             mapa: "Images/potencia.png"
@@ -43,22 +47,27 @@ habilidadeSelect.addEventListener('change', function() {
     const habilidade = habilidadeSelect.value;
     
     if (habilidade) {
+        habilidadeDescricao.textContent = subHabilidades[habilidade].descricao;
         subHabilidadeContainer.style.display = 'block';
         subHabilidadeSelect.innerHTML = '<option value="">Selecione um tópico...</option>';
 
         Object.keys(subHabilidades[habilidade]).forEach(subHabilidade => {
-            let option = document.createElement('option');
-            option.value = subHabilidade;
-            option.textContent = subHabilidade;
-            subHabilidadeSelect.appendChild(option);
+            if (subHabilidade !== "descricao") {
+                let option = document.createElement('option');
+                option.value = subHabilidade;
+                option.textContent = subHabilidade;
+                subHabilidadeSelect.appendChild(option);
+            }
         });
 
         explicacao.style.display = 'none';
     } else {
+        habilidadeDescricao.textContent = "";
         subHabilidadeContainer.style.display = 'none';
         explicacao.style.display = 'none';
     }
 });
+
 
 subHabilidadeSelect.addEventListener('change', function() {
     const habilidade = habilidadeSelect.value;
@@ -75,6 +84,7 @@ subHabilidadeSelect.addEventListener('change', function() {
 
 resetButton.addEventListener('click', function() {
     habilidadeSelect.value = '';
+    habilidadeDescricao.innerHTML = '';
     subHabilidadeSelect.innerHTML = '<option value="">Selecione um tópico...</option>';
     subHabilidadeContainer.style.display = 'none';
     explicacao.style.display = 'none';
