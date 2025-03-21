@@ -26,7 +26,7 @@ label {
     font-weight: bold;
     font-size: 1.1em;
     color: #dcdcdc;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: block;
 }
 
@@ -36,7 +36,7 @@ select, button {
     font-size: 1em;
     border-radius: 6px;
     border: none;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 select {
@@ -66,11 +66,17 @@ select:hover {
 
 .explicacao {
     background: #404552;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 30px;
     display: none;
     transition: opacity 0.4s ease-in-out;
+    line-height: 1.8;
+}
+
+.habilidade-descricao { 
+    padding: 1em;
+    line-height: 2;
 }
 
 .mapaMental img {
@@ -83,7 +89,7 @@ select:hover {
     background-color: #22252b;
     color: #f8f8f8;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     width: 100%;
     position: fixed;
     bottom: 0;
