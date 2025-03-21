@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -17,13 +18,14 @@
                 <option value="EM13MAT403">EM13MAT403 - Funções Exponenciais e Logarítmicas</option>
             </select>
         </div>
+        <div id="habilidadeDescricao" class="habilidade-descricao"></div>
         <div class="subHabilidadeSelectContainer" id="subHabilidadeContainer" style="display: none;">
             <label for="subHabilidadeSelect" class="habilidade-texto">Escolha um tópico:</label>
             <select id="subHabilidadeSelect">
                 <option value="">Selecione um tópico...</option>
             </select>
         </div>
-        <div class="explicacao" id="explicacao">
+        <div class="explicacao" id="explicacao" style="display: none;">
             <h3>Descrição Detalhada:</h3>
             <p id="textoExplicacao"></p>
             <div class="mapaMental" id="mapaMental">
@@ -36,7 +38,7 @@
     <footer class="footer">
         <p>Desenvolvido por: Daniel Moraes, Ryan Silva, Rafael Viana, Vitor Reis, Gustavo Henrique e Murilo Moreira</p>
     </footer>
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" style="display: none;">
         <span class="close">&times;</span>
         <img id="modalImg" class="modal-content">
     </div>
