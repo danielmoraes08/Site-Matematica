@@ -40,7 +40,33 @@ const subHabilidades = {
             descricao: `A função exponencial é uma função matemática que descreve o crescimento ou decaimento rápido de uma quantidade. Ela é modelada por \(f(x) = a^x\), onde \(a\) é uma constante positiva. As funções exponenciais são amplamente utilizadas para modelar fenômenos naturais e econômicos, como o crescimento populacional, a decomposição de substâncias químicas, e os fluxos de capital no mercado financeiro. Além disso, elas estão no coração das equações diferenciais que modelam muitos sistemas dinâmicos, como o comportamento de circuitos elétricos, sistemas biológicos e mesmo o comportamento das taxas de juros.`,
             mapa: "Images/funcaoexponencial.png"
         }
+    },
+    "MatFinan": {
+        descricao: "Compreender e aplicar os principais conceitos de matemática financeira, com ou sem o uso de tecnologias digitais, para a resolução de problemas envolvendo situações do cotidiano, como financiamentos, investimentos e planejamento orçamentário.",
+        "SAC": {
+            descricao: `O Sistema de Amortização Constante (SAC) é um modelo de financiamento em que o valor amortizado em cada parcela é constante, fazendo com que o valor total das prestações diminua ao longo do tempo. Esse sistema é amplamente utilizado em financiamentos imobiliários, pois favorece o devedor com parcelas decrescentes e menor pagamento total de juros ao final do contrato. A compreensão do SAC permite que estudantes analisem criticamente propostas de financiamento e façam escolhas mais conscientes.`,
+            mapa: "Images/sac.png"
+        },
+        "Price": {
+            descricao: `O Sistema Francês de Amortização (Tabela Price) é um modelo de financiamento caracterizado por parcelas fixas ao longo do tempo. Embora a prestação se mantenha constante, a composição entre amortização e juros varia: inicialmente, paga-se mais juros e menos amortização. Esse sistema é comumente utilizado em empréstimos pessoais e financiamentos de veículos. Entender o funcionamento da Tabela Price é essencial para comparar alternativas de crédito e compreender o impacto dos juros compostos sobre o valor total pago.`,
+            mapa: "Images/price.png"
+        }
+    },
+    "FigGeo": {
+        descricao: "Reconhecer, representar e resolver problemas envolvendo figuras geométricas planas e espaciais, utilizando propriedades e relações entre elementos geométricos, além de realizar estimativas e medições em contextos diversos.",
+        "Figuras Geométricas": {
+            descricao: `As figuras geométricas são formas estudadas na geometria, como triângulos, quadrados, retângulos, círculos, prismas e cilindros. O estudo dessas figuras envolve o reconhecimento de propriedades como lados, ângulos, perímetros, áreas e volumes. A geometria está presente em diversas situações cotidianas, como na arquitetura, design, construção civil e até em jogos digitais. O desenvolvimento da percepção espacial e a capacidade de visualização são habilidades fundamentais que a geometria promove.`,
+            mapa: "Images/figurasgeometricas.png"
+        }
+    },
+    "Trigonometria": {
+        descricao: "Compreender e aplicar as razões trigonométricas no estudo de triângulos e suas aplicações em contextos diversos, como engenharia, navegação, astronomia e construções.",
+        "Trigonometria": {
+            descricao: `A trigonometria é um ramo da matemática que estuda as relações entre os ângulos e os lados dos triângulos. As principais razões trigonométricas — seno, cosseno e tangente — permitem resolver problemas envolvendo medidas indiretas, como a altura de edifícios ou a distância entre dois pontos inacessíveis. Além da geometria, a trigonometria é fundamental em disciplinas como a física, a engenharia e a astronomia, pois permite modelar fenômenos periódicos como ondas sonoras, luminosas e elétricas.`,
+            mapa: "Images/trigonometria.png"
+        }
     }
+    
 };
 
 habilidadeSelect.addEventListener('change', function() {
